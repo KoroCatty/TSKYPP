@@ -1,0 +1,19 @@
+@use "./setting" as *;
+
+.ui {
+  margin: 40px 0;
+
+  &__card {
+
+    &:hover {
+      filter: brightness(0.8);
+    }
+  }
+
+  &__link {
+    color: $base;
+    text-decoration: none;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+}

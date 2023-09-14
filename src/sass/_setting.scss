@@ -1,0 +1,44 @@
+$ff: "freight-display-pro", "STKaiti", "essonnes-display", serif;
+
+/* Color Theme -------------------------------------------*/
+$base:#000;
+$secondary_base: #ff0012;
+$accent: #ffee00;
+$btn_color: #b490ab;
+$color_white: rgb(240, 240, 240);
+
+/* Mixin---------------------------------------------- */
+$breakpoints: (
+  's': 'screen and (max-width:480px)',
+  'm': 'screen and (max-width: 767px) and (min-width:480px)',
+  'l': 'screen and (max-width: 1000px) and (min-width: 767px)',
+  'xl': 'screen and (min-width: 1001px) ',
+) !default;
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+// Example
+// @include mq(l) { 
+//     color: red;
+//   }
+
+
+/* Common---------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: $ff;
+  letter-spacing: 1px;
+  overflow: hidden auto;
+  color: rgb(215, 215, 215);
+  background-color: $base;
+}

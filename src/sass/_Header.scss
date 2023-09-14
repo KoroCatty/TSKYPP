@@ -1,0 +1,105 @@
+@use "./setting" as *;
+
+.header {
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  &.scrolled {
+    opacity: 0.9;
+  }
+
+  .nav {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1.6fr;
+    place-items: center;
+
+    @include mq(s) {
+      grid-template-columns: 1fr 1fr ;
+    }
+    
+    @include mq(m) {
+      grid-template-columns: 1fr 1fr ;
+      column-gap: 10%;
+    }
+
+    @include mq(l) {
+      grid-template-columns: 1fr 1fr ;
+      column-gap: 40%;
+    }
+  }
+
+  .navLinks {
+
+    @include mq(l) {
+      display: none;
+    }
+
+    @include mq(m) {
+      display: none;
+    }
+
+    @include mq(s) {
+      display: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 1.2rem;
+      margin: 0 12px;
+      display: inline-block;
+    }
+  }
+
+  .navLogo {
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 2.4rem;
+      margin: 0 12px;
+      display: inline-block;
+
+      @include mq(s) {
+        font-size: 1.6rem;
+        margin-top: 4px;
+      }
+      
+      @include mq(m) {
+        font-size: 2rem;
+        margin-top: 6px;
+      }
+      @include mq(l) {
+        margin-top: 6px;
+      }
+    }
+  }
+
+  .navSNS {
+
+    @include mq(l) {
+      display: none;
+
+    }
+    @include mq(m) {
+      display: none;
+
+    }
+    @include mq(s) {
+      display: none;
+    }
+
+    a {
+      img {
+        width: 30px;
+        height: 30px;
+        margin: 0 0.6rem;
+      }
+    }
+  }
+}
+
+

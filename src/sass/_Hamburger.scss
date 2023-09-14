@@ -1,0 +1,170 @@
+@use "./setting" as *;
+
+// 画面全体を覆う膜
+// JS (useState)
+.unShownLayer {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  display: block;
+  transition: 0.6 all ease;
+  // pointer-events: none; //pointer系イベントは無効化
+}
+
+// ================================
+// when a hamburger menu is open
+// JS (useState)
+// ================================
+.hamOpen {
+  .headerHam__icon--bar.top {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .headerHam__icon--bar.middle {
+    display: none;
+  }
+  .headerHam__icon--bar.bottom {
+    transform: translateY(-5px) rotate(132deg);
+  }
+}
+// ================================
+// when a hamburger menu is closed
+// ================================
+.headerHam {
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  z-index: 2;
+  transform: translate(0, -8px);
+
+  @include mq(s) {
+    display: block;
+  }
+
+  @include mq(m) {
+    display: block;
+  }
+  @include mq(l) {
+    display: block;
+  }
+
+  &__icon {
+    cursor: pointer;
+    background-color: none;
+    background: none;
+    border: none;
+    appearance: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+    width: 30px;
+    height: 13px;
+    position: relative;
+    margin-right: 6px;
+
+    &--bar {
+      background: rgb(33, 33, 33);
+      width: inherit;
+      height: 2px;
+      transition: transform 0.5s, opacity 0.5s;
+      display: block;
+
+      // JS (useState)
+      &.iconWhite {
+        background: white;
+      }
+
+      &.top {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      &.middle {
+        position: absolute;
+        top: 7px;
+        left: 0;
+      }
+
+      &.bottom {
+        position: absolute;
+        top: 14px;
+        left: 0;
+      }
+    }
+  }
+}
+
+// =====================
+// JS (useState)
+// =====================
+.mask {
+  opacity: 0.4;
+  background-color: rgba(0, 0, 0, 0.8);
+  // pointer-events: none; //pointer系イベントは無効化
+}
+
+.overWrap {
+  position: fixed;
+  top: 0;
+  right: -20%;
+  height: 100vh;
+  opacity: 0;
+  transition: all 0.5s ease;
+  pointer-events: none; //　押していない時は無効に
+
+  &__box {
+    color: white;
+    margin-top: 200px;
+
+    @include mq(s) {
+      margin-top: 120px;
+      margin-left: 20px;
+
+    }
+
+    @include mq(m) {
+      margin-left: 40px;
+    }
+
+    &--item {
+      margin: 36px 0;
+    }
+
+    &--link {
+      color: white;
+      text-decoration: none;
+      font-size: 1.25rem;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+// js
+.overWrap.active {
+  pointer-events: auto !important; // burgerメニュー内を押せるようにする
+  z-index: 1;
+}
+
+.hiddenMenu {
+  position: fixed;
+  top: 0;
+  display: block;
+  opacity: 1;
+  z-index: 1;
+  height: 180vw;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 70vw;
+  height: 100vh;
+
+  @include mq(s) {
+    width: 92vw;
+  }
+  @include mq(m) {
+    width: 70vw;
+  }
+}
+
+.InHamburger {
+  margin-top: 48px;
+}

@@ -1,0 +1,94 @@
+@use "./setting" as *;
+
+.footer {
+  padding: 80px 0;
+  background-color: #0e0e0e;
+
+  @include mq(s) {
+    padding: 40px 0;
+  }
+
+  &__title {
+    letter-spacing: -1px;
+    margin-bottom: 40px;
+  }
+
+  .row {
+    @include mq(s) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    @include mq(m) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__sns {
+    img {
+      width: 30px;
+      height: 30px;
+      margin-left: 1rem !important;
+
+      @include mq(s) {
+        width: 24px;
+        height: 24px;
+      }
+
+      @include mq(m) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__logo {
+    font-size: 2.6rem;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+
+    @include mq(s) {
+      font-size: 2rem;
+      margin-top: 60px;
+    }
+  }
+
+  &__links {
+    @include mq(s) {
+      border-bottom: 1px solid rgb(85, 85, 85);
+      margin-bottom: 40px;
+    }
+
+    @include mq(m) {
+      border-bottom: 1px solid rgb(85, 85, 85);
+      margin-bottom: 40px;
+    }
+
+    a {
+      display: block;
+      width: fit-content;
+      text-decoration: none;
+      font-size: 1.3rem;
+      color: white;
+      margin-bottom: 30px;
+
+      @include mq(s) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &__copyRight {
+    font-size: 0.8rem;
+  }
+}
+
+.breakLineSP {
+  display: none;
+
+  @include mq(s) {
+    display: block;
+  }
+}

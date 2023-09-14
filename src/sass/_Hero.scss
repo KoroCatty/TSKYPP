@@ -1,0 +1,16 @@
+@use "./setting" as *;
+
+.hero {
+
+  &__img {
+    height: 40vh;
+    width: 100%;
+    overflow: hidden;
+    background-size: cover;
+    object-fit: cover;
+    
+    @media screen and (max-width: 999px) {
+      height: 50vh;
+    }
+  }
+}
