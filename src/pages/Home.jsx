@@ -1,6 +1,6 @@
 // components
 import Hero from "../components/Hero"
-import Cards from "../components/cards"
+import Cards from "../components/Cards"
 
 function Home() {
   return (
