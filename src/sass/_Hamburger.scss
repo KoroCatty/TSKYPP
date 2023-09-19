@@ -129,6 +129,7 @@
 
     &--item {
       margin: 36px 0;
+      list-style: none;
     }
 
     &--link {
@@ -136,6 +137,7 @@
       text-decoration: none;
       font-size: 1.25rem;
       letter-spacing: 1px;
+      list-style: none;
     }
   }
 }
@@ -143,7 +145,7 @@
 // js
 .overWrap.active {
   pointer-events: auto !important; // burgerメニュー内を押せるようにする
-  z-index: 1;
+  z-index: 10;
 }
 
 .hiddenMenu {

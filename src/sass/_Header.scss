@@ -1,19 +1,22 @@
 @use "./setting" as *;
 
 .header {
-  z-index: 1;
+  z-index: 2;
+  // position: sticky;
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
+  
   &.scrolled {
     opacity: 0.9;
   }
 
   .nav {
     display: grid;
-    grid-template-columns: 1.6fr 1fr 1.6fr;
+    grid-template-columns: 0.6fr 0.8fr 0.6fr;
     place-items: center;
 
     @include mq(s) {
@@ -48,18 +51,19 @@
     a {
       text-decoration: none;
       color: black;
-      font-size: 1.2rem;
+      font-size: 1.6rem;
       margin: 0 12px;
       display: inline-block;
     }
   }
 
   .navLogo {
+    margin-top: 2px;
 
     a {
       text-decoration: none;
       color: black;
-      font-size: 2.4rem;
+      font-size: 2rem;
       margin: 0 12px;
       display: inline-block;
 
@@ -96,7 +100,6 @@
       img {
         width: 30px;
         height: 30px;
-        margin: 0 0.6rem;
       }
     }
   }
