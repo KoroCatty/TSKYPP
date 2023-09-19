@@ -59,13 +59,13 @@ function Header() {
           <div className="navLinks">
             
             <Link to="/" onClick={ChangePageTop}>
-              Docs
+              DOCS
+            </Link>
+            <Link to="/about" onClick={ChangePageTop}>
+              ABOUT US
             </Link>
             <Link to="/contact" onClick={ChangePageTop}>
-              Contact
-            </Link>
-            <Link to="/contact" onClick={ChangePageTop}>
-              About Us
+              CONTACT
             </Link>
           </div>
 
@@ -140,7 +140,7 @@ function Header() {
               </li>
               <li className="overWrap__box--item">
                 <Link
-                  to="/contact"
+                  to="/about"
                   onClick={() => {
                     ChangePageTop();
                     toggleHam();

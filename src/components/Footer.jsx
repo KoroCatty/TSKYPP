@@ -3,9 +3,11 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 // images
-import FB from "../images/Fb_w.svg";
 import Insta from "../images/Insta_w.svg";
 import Twitter from "../images/Twitter_w.svg";
+
+// react-icons
+import { AiFillGithub } from "react-icons/ai";
 
 // go to top
 function ChangePageTop() {
@@ -19,11 +21,11 @@ function Footer() {
         <Container>
           <Row>
             <Col>
-              <h3 className="footer__title">LATEST ON TWITTER</h3>
+              <h3 className="footer__title">GITHUB REPOSITORY</h3>
 
               <div className="footer__sns">
-                <a href="https://icons8.com" className="">
-                  <img src={FB} alt="Facebook Icon" />
+                <a href="https://github.com/TechnoEmpire">
+                <AiFillGithub style={{ color: "white", fontSize: "2rem" }} />
                 </a>
                 <a href="https://icons8.com" className="">
                   <img src={Insta} alt="" />
@@ -44,6 +46,9 @@ function Footer() {
               <div className="footer__links">
                 <Link to="/" onClick={ChangePageTop}>
                   HOME
+                </Link>
+                <Link to="/about" onClick={ChangePageTop}>
+                  ABOUT US
                 </Link>
                 <Link to="/contact" onClick={ChangePageTop}>
                   CONTACT
