@@ -155,9 +155,9 @@ function Header() {
             {/* ================================== */}
             {/* SNS Icons borrowed from footer one */}
             {/* ================================== */}
-            <div className="footer__sns InHamburger">
+            <div className="InHamburger">
               <a href="https://github.com/TechnoEmpire" className="sns icon">
-                <AiFillGithub style={{ color: "white", fontSize: "2rem" }} />
+                <AiFillGithub style={{ color: "white", fontSize: "2rem",  }} />
               </a>
             </div>
           </div>

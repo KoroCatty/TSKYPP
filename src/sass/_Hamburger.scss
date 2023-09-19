@@ -169,4 +169,13 @@
 
 .InHamburger {
   margin-top: 48px;
+  text-align: center;
+
+  @include mq(s) {
+    margin-left: -4rem;
+  }
+
+  @include mq(m) {
+    margin-left: -10rem;
+  }
 }

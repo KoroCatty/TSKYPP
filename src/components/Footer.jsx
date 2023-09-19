@@ -3,7 +3,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 // images
-import Insta from "../images/Insta_w.svg";
 import Twitter from "../images/Twitter_w.svg";
 
 // react-icons
@@ -26,9 +25,6 @@ function Footer() {
               <div className="footer__sns">
                 <a href="https://github.com/TechnoEmpire">
                 <AiFillGithub style={{ color: "white", fontSize: "2rem" }} />
-                </a>
-                <a href="https://icons8.com" className="">
-                  <img src={Insta} alt="" />
                 </a>
                 <a href="https://icons8.com" className="">
                   <img src={Twitter} alt="" />
