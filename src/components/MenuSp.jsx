@@ -10,7 +10,7 @@ function MenuSp() {
       
       <Accordion.Item eventKey="0" className="custom-accordion">
 
-        <Accordion.Header className="custom-accordion__header">Menus</Accordion.Header>
+        <Accordion.Header className="custom-accordion__header">Docs Menus</Accordion.Header>
         <Accordion.Body>
 
           {/* Menu Component */}

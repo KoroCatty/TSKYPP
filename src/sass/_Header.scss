@@ -6,7 +6,8 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgb(222, 222, 222);
+  // background-color: rgb(222, 222, 222);
+  background-color: rgb(23, 23, 23);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   
   &.scrolled {
@@ -49,7 +50,7 @@
 
     a {
       text-decoration: none;
-      color: rgb(63, 63, 63);
+      color: rgb(221, 221, 221);
       font-weight: 600;
       font-size: 1.3rem;
       margin: 0 12px;

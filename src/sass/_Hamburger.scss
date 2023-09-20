@@ -63,7 +63,8 @@
     margin-right: 6px;
 
     &--bar {
-      background: rgb(33, 33, 33);
+      // background: rgb(33, 33, 33);
+      background: rgb(223, 223, 223);
       width: inherit;
       height: 2px;
       transition: transform 0.5s, opacity 0.5s;

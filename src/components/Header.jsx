@@ -69,8 +69,8 @@ function Header() {
           </div>
 
           <div className="navSNS">
-            <a href="https://github.com/TechnoEmpire" className="navSNS__link">
-              <AiFillGithub style={{ color: "black", fontSize: "2rem" }} />
+            <a target="blank" href="https://github.com/TechnoEmpire" className="navSNS__link">
+              <AiFillGithub style={{ color: "white", fontSize: "2rem" }} />
             </a>
           </div>
 
