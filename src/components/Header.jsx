@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 
+import { useLocation } from "react-router-dom";
+
 // react-router-dom
 import { Link } from "react-router-dom";
 
@@ -14,6 +16,9 @@ function ChangePageTop() {
 }
 
 function Header() {
+  const location = useLocation();
+  // console.log(location.pathname); // ex) /about
+
   // hamburger menu
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -52,7 +57,12 @@ function Header() {
           {/* LOGO */}
           <h1 className="navLogo">
             <Link to="/" onClick={ChangePageTop}>
-              <div className="commonTitle" style={{ padding: 0, fontSize: "2rem" }}>TSYKPP</div>
+              <div
+                className="commonTitle"
+                style={{ padding: 0, fontSize: "2rem" }}
+              >
+                TSYKPP
+              </div>
             </Link>
           </h1>
 
@@ -69,7 +79,11 @@ function Header() {
           </div>
 
           <div className="navSNS">
-            <a target="blank" href="https://github.com/TechnoEmpire" className="navSNS__link">
+            <a
+              target="blank"
+              href="https://github.com/TechnoEmpire"
+              className="navSNS__link"
+            >
               <AiFillGithub style={{ color: "white", fontSize: "2rem" }} />
             </a>
           </div>
@@ -151,7 +165,8 @@ function Header() {
 
               {/* //! SP ONLY ACCORDION */}
               <div className="menuSp">
-                <MenuSp />
+                {/* No display in about & contact page */}
+                {location.pathname !== "/about" && location.pathname !== "/contact" && <MenuSp />}
               </div>
             </ul>
 
