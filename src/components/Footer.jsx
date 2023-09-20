@@ -23,10 +23,10 @@ function Footer() {
               <h3 className="footer__title">GITHUB REPOSITORY</h3>
 
               <div className="footer__sns">
-                <a href="https://github.com/TechnoEmpire">
+                <a target="blank"  href="https://github.com/TechnoEmpire">
                 <AiFillGithub style={{ color: "white", fontSize: "2rem" }} />
                 </a>
-                <a href="https://icons8.com" className="">
+                <a target="blank" href="https://icons8.com" className="">
                   <img src={Twitter} alt="" />
                 </a>
               </div>
