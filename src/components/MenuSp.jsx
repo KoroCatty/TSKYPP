@@ -6,7 +6,8 @@ import LeftMenu from "./LeftMenu";
 
 function MenuSp() {
   return (
-    <Accordion  className="custom-accordion__header " style={{background:"black", backgroundColor: "black"}} >
+    <Accordion className="custom-accordion__header " 
+    style={{background:"black", backgroundColor: "black"}} >
       
       <Accordion.Item eventKey="0" className="custom-accordion">
 

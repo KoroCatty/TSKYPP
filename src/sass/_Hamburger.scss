@@ -119,9 +119,8 @@
     margin-top: 100px;
 
     @include mq(s) {
-    margin-top: 60px;
+      margin-top: 60px;
       margin-left: 20px;
-
     }
 
     @include mq(m) {
@@ -139,6 +138,10 @@
       font-size: 1.25rem;
       letter-spacing: 1px;
       list-style: none;
+
+      @include mq(s) {
+        font-size: 1rem;
+      }
     }
   }
 }
@@ -164,7 +167,7 @@
 
   @include mq(s) {
     width: 92vw;
-    padding: 20px 0 ;
+    padding: 20px 0;
   }
   @include mq(m) {
     width: 85vw;
@@ -185,5 +188,60 @@
 
   @include mq(l) {
     margin-left: -10rem;
+  }
+}
+
+//! SP ONLY ACCORDION
+.menuSp {
+  display: none;
+
+  @include mq(s) {
+    display: block;
+  }
+
+  @include mq(m) {
+    display: block;
+  }
+
+  @include mq(l) {
+    display: block;
+  }
+
+  .custom-accordion {
+    background-color: black;
+    color: white;
+    border: none;
+    width: 40vw;
+
+    @include mq(s) {
+      width: 60vw;
+      transform: translate(-16%, 0);
+    }
+
+    @include mq(m) {
+      width: 55vw;
+      transform: translate(-16%, 0);
+    }
+  }
+
+  .accordion-button {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    color: white !important;
+
+    @include mq(m) {
+      font-size: 1.2rem;
+    }
+
+    @include mq(l) {
+      font-size: 1.2rem;
+    }
+
+    &::after {
+      filter: brightness(5);
+    }
+  }
+
+  .accordion-body {
+    padding: 0;
   }
 }

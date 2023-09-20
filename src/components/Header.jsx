@@ -52,7 +52,7 @@ function Header() {
           {/* LOGO */}
           <h1 className="navLogo">
             <Link to="/" onClick={ChangePageTop}>
-              <div className="commonTitle" style={{ padding: 0, fontSize: "2.4rem" }}>TSYKPP</div>
+              <div className="commonTitle" style={{ padding: 0, fontSize: "2rem" }}>TSYKPP</div>
             </Link>
           </h1>
 
