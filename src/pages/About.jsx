@@ -1,9 +1,16 @@
 // components
 import Hero from "../components/Hero";
 
+import { Helmet } from "react-helmet";
+
 const About = () => {
   return (
     <main>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>TSYKPP | ABOUT US</title>
+      </Helmet>
+
       <Hero />
 
       <article>
@@ -23,7 +30,6 @@ const About = () => {
           consequuntur numquam, asperiores porro iste officiis amet
           reprehenderit reiciendis. Praesentium optio natus officiis?
         </p>
-
       </article>
     </main>
   );
