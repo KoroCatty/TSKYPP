@@ -2,6 +2,10 @@ const Forms = () => {
   return (
     <>
       <section>
+        <h1 className="commonTitle">
+          CONTACT
+        </h1>
+
         <form>
           {/* Name */}
           <label htmlFor="inputName" className="inputLabel">

@@ -1,19 +1,21 @@
 @use "./setting" as *;
 
 .header {
-  z-index: 1;
+  z-index: 2;
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgb(222, 222, 222);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
+  
   &.scrolled {
     opacity: 0.9;
   }
 
   .nav {
     display: grid;
-    grid-template-columns: 1.6fr 1fr 1.6fr;
+    grid-template-columns: 0.6fr 0.8fr 0.6fr;
     place-items: center;
 
     @include mq(s) {
@@ -47,19 +49,21 @@
 
     a {
       text-decoration: none;
-      color: black;
-      font-size: 1.2rem;
+      color: rgb(63, 63, 63);
+      font-weight: 600;
+      font-size: 1.3rem;
       margin: 0 12px;
       display: inline-block;
     }
   }
 
   .navLogo {
+    margin-top: 2px;
 
     a {
       text-decoration: none;
       color: black;
-      font-size: 2.4rem;
+      font-size: 2rem;
       margin: 0 12px;
       display: inline-block;
 
@@ -96,10 +100,56 @@
       img {
         width: 30px;
         height: 30px;
-        margin: 0 0.6rem;
       }
     }
   }
 }
 
+//! SP ONLY ACCORDION
+.menuSp {
+  display: none;
+
+  @include mq(s) {
+    display: block;
+  }
+
+  @include mq(m) {
+    display: block;
+  }
+
+  @include mq(l) {
+    display: block;
+  }
+  
+  .custom-accordion{
+    background-color: black;
+    color: white; 
+    border: none;
+    width: 40vw;
+
+    @include mq(s) {
+      width: 60vw;
+      transform: translate(-16%, 0);
+
+    }
+  
+    @include mq(m) {
+      width: 55vw;
+      transform: translate(-16%, 0);
+    }
+  }
+
+  .accordion-button  {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    color: white !important;
+
+    &::after {
+      filter: brightness(5)
+    }
+  }
+
+  .accordion-body {
+    padding: 0;
+  }
+}
 

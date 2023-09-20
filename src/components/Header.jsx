@@ -3,15 +3,10 @@ import { useState, useEffect } from "react";
 // react-router-dom
 import { Link } from "react-router-dom";
 
-// img
-import FB from "../images/Facebook.svg";
-import Insta from "../images/Insta.svg";
-import Twitter from "../images/Twitter.svg";
+// react-icons
+import { AiFillGithub } from "react-icons/ai";
 
-// img
-import FB_w from "../images/Fb_w.svg";
-import Insta_w from "../images/Insta_w.svg";
-import Twitter_w from "../images/Twitter_w.svg";
+import MenuSp from "./MenuSp";
 
 // go to top
 function ChangePageTop() {
@@ -54,31 +49,28 @@ function Header() {
         ></span>
 
         <nav className="nav">
-          <div className="navLinks">
-            <Link to="/" onClick={ChangePageTop}>
-              Home
-            </Link>
-            <Link to="/contact" onClick={ChangePageTop}>
-              Contact
-            </Link>
-          </div>
-
           {/* LOGO */}
           <h1 className="navLogo">
             <Link to="/" onClick={ChangePageTop}>
-              MODAL UI
+              <div className="commonTitle" style={{ padding: 0, fontSize: "2.4rem" }}>TSYKPP</div>
             </Link>
           </h1>
 
+          <div className="navLinks">
+            <Link to="/" onClick={ChangePageTop}>
+              DOCS
+            </Link>
+            <Link to="/about" onClick={ChangePageTop}>
+              ABOUT US
+            </Link>
+            <Link to="/contact" onClick={ChangePageTop}>
+              CONTACT
+            </Link>
+          </div>
+
           <div className="navSNS">
-            <a href="" className="navSNS__link">
-              <img src={FB} alt="FB" className="navSNS__img" />
-            </a>
-            <a href="" className="navSNS__link">
-              <img src={Insta} alt="Instagram" className="navSNS__img" />
-            </a>
-            <a href="" className="navSNS__link">
-              <img src={Twitter} alt="Twiiter" className="navSNS__img" />
+            <a href="https://github.com/TechnoEmpire" className="navSNS__link">
+              <AiFillGithub style={{ color: "black", fontSize: "2rem" }} />
             </a>
           </div>
 
@@ -128,7 +120,7 @@ function Header() {
                   }}
                   className="overWrap__box--link"
                 >
-                  Home
+                  DOCUMENTATION
                 </Link>
               </li>
 
@@ -144,20 +136,31 @@ function Header() {
                   CONTACT
                 </Link>
               </li>
+              <li className="overWrap__box--item">
+                <Link
+                  to="/about"
+                  onClick={() => {
+                    ChangePageTop();
+                    toggleHam();
+                  }}
+                  className="overWrap__box--link"
+                >
+                  ABOUT US
+                </Link>
+              </li>
+
+              {/* //! SP ONLY ACCORDION */}
+              <div className="menuSp">
+                <MenuSp />
+              </div>
             </ul>
 
             {/* ================================== */}
             {/* SNS Icons borrowed from footer one */}
             {/* ================================== */}
-            <div className="footer__sns InHamburger">
-              <a href="https://icons8.com" className="sns icon">
-                <img src={FB_w} alt="Facebook Icon" />
-              </a>
-              <a href="https://icons8.com" className="sns icon">
-                <img src={Insta_w} alt="" />
-              </a>
-              <a href="https://icons8.com" className="sns icon">
-                <img src={Twitter_w} alt="" />
+            <div className="InHamburger">
+              <a href="https://github.com/TechnoEmpire" className="sns icon">
+                <AiFillGithub style={{ color: "white", fontSize: "2rem" }} />
               </a>
             </div>
           </div>

@@ -1,14 +1,22 @@
 // components
-import Hero from "../components/Hero"
-import Cards from "../components/Cards"
+import LeftMenu from "../components/LeftMenu";
+import Body from "../components/Body";
 
 function Home() {
   return (
-    <div>
-      <Hero />
-      <Cards />
-    </div>
-  )
+    <main style={{ marginTop: "52px" }}>
+
+      <div className="homeContents">
+        <div className="homeContents__leftMenu">
+          <LeftMenu />
+        </div>
+        <div className="homeContents__body">
+          <Body />
+        </div>
+      </div>
+
+    </main>
+  );
 }
 
-export default Home
+export default Home;
