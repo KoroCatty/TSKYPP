@@ -22,14 +22,14 @@ const LeftMenu = () => {
         <a href="#4"><i className="fa fa fa-tasks"></i><span>Modal</span><i className="arrow fa fa-angle-right pull-right"></i></a>
       </li>
 
-      <li className="sub-menu active">
+      <li className="sub-menu">
         <a href="#5"><i className="fa fa-envelope"></i><span>About Us</span><i className="arrow fa fa-angle-right pull-right"></i></a>
-        <ul>
+        {/* <ul>
           <li className="active"><a href="">GitHub</a>
           </li>
-          <li><a href="">Holmesglen</a>
+          <li className="active"><a href="">Holmesglen</a>
           </li>
-        </ul>
+        </ul> */}
       </li>
 
       <li className="sub-menu">

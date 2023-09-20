@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 // react-icons
 import { AiFillGithub } from "react-icons/ai";
 
+import MenuSp from "./MenuSp";
+
 // go to top
 function ChangePageTop() {
   window.scroll(0, 0); // ページの一番上に移動
@@ -47,17 +49,14 @@ function Header() {
         ></span>
 
         <nav className="nav">
-
-
           {/* LOGO */}
           <h1 className="navLogo">
             <Link to="/" onClick={ChangePageTop}>
-             TSYKPP
+              <div className="commonTitle" style={{ padding: 0, fontSize: "2.4rem" }}>TSYKPP</div>
             </Link>
           </h1>
 
           <div className="navLinks">
-            
             <Link to="/" onClick={ChangePageTop}>
               DOCS
             </Link>
@@ -68,7 +67,6 @@ function Header() {
               CONTACT
             </Link>
           </div>
-
 
           <div className="navSNS">
             <a href="https://github.com/TechnoEmpire" className="navSNS__link">
@@ -150,6 +148,11 @@ function Header() {
                   ABOUT US
                 </Link>
               </li>
+
+              {/* //! SP ONLY ACCORDION */}
+              <div className="menuSp">
+                <MenuSp />
+              </div>
             </ul>
 
             {/* ================================== */}
@@ -157,7 +160,7 @@ function Header() {
             {/* ================================== */}
             <div className="InHamburger">
               <a href="https://github.com/TechnoEmpire" className="sns icon">
-                <AiFillGithub style={{ color: "white", fontSize: "2rem",  }} />
+                <AiFillGithub style={{ color: "white", fontSize: "2rem" }} />
               </a>
             </div>
           </div>

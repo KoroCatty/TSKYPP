@@ -34,7 +34,7 @@
   cursor: pointer;
   display: none;
   align-items: center;
-  z-index: 2;
+  z-index: 11;
   transform: translate(0, -8px);
 
   @include mq(s) {
@@ -115,10 +115,10 @@
 
   &__box {
     color: white;
-    margin-top: 200px;
+    margin-top: 100px;
 
     @include mq(s) {
-      margin-top: 120px;
+    margin-top: 60px;
       margin-left: 20px;
 
     }
@@ -148,7 +148,9 @@
   z-index: 10;
 }
 
+// Hidden Menu
 .hiddenMenu {
+  overflow-y: scroll;
   position: fixed;
   top: 0;
   display: block;
@@ -161,9 +163,10 @@
 
   @include mq(s) {
     width: 92vw;
+    padding: 20px 0 ;
   }
   @include mq(m) {
-    width: 70vw;
+    width: 85vw;
   }
 }
 
@@ -176,6 +179,10 @@
   }
 
   @include mq(m) {
+    margin-left: -10rem;
+  }
+
+  @include mq(l) {
     margin-left: -10rem;
   }
 }

@@ -2,41 +2,35 @@
 
 .sidebar {
   // background: #293949;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  -ms-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   z-index: 1;
 
-  @include mq(s) {
-  }
-
-  @include mq(m) {
-  }
-  
   #leftside-navigation {
-
-    ul, ul ul {
+    ul,
+    ul ul {
       margin: -2px 0 0;
       padding: 0;
     }
 
     ul {
-
       li {
         list-style-type: none;
-        border-bottom: 1px solid rgba(255,255,255,.08);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
-        &.active {
+        @include mq(s) {
+          height: 52px;
+        }
 
-          & > a {
-            color: #1abc9c;
-          }
+        @include mq(m) {
+          height: 52px;
+        }
 
-          ul {
-            display: block;
-          }
+        @include mq(l) {
+          height: 60px;
         }
 
         a {
@@ -62,7 +56,8 @@
 
           i {
             width: 20px;
-            .fa-angle-left, .fa-angle-right {
+            .fa-angle-left,
+            .fa-angle-right {
               padding-top: 3px;
             }
           }

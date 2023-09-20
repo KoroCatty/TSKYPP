@@ -19,10 +19,28 @@
     @include mq(m) {
       display: none;
     }
+
+    @include mq(l) {
+      display: none;
+    }
   }
 
   &__body {
     width: 80%;
     padding: 4rem;
+
+    @include mq(s) {
+      width: 100%;
+    padding: 1.4rem;
+    }
+  
+    @include mq(m) {
+      width: 100%;
+    padding: 3rem;
+    }
+
+    @include mq(l) {
+      width: 100%;
+    }
   }
 }
